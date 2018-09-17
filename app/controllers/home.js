@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const Article = mongoose.model('Article');
 
 module.exports = (app) => {
   app.use('/', router);
@@ -9,7 +8,6 @@ module.exports = (app) => {
 
 router.get('/', (req, res, next) => {
   res.render('index', {
-    title: 'Generator-Express MVC',
-    articles: articles
+    title: 'Generator-Express MVC'
   });
 });
