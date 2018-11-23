@@ -1,33 +1,36 @@
-const path = require('path');
-const rootPath = path.normalize(__dirname + '/..');
-const env = process.env.NODE_ENV || 'development';
+const path = require("path");
+const rootPath = path.normalize(__dirname + "/..");
+const env = process.env.NODE_ENV || "development";
 
 const config = {
   development: {
     root: rootPath,
     app: {
-      name: 'allnodes'
+      name: "allnodes"
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/allnodes-development'
+    db: "mongodb://localhost/allnodes-development",
+    esDb: "localhost:9200"
   },
 
   test: {
     root: rootPath,
     app: {
-      name: 'allnodes'
+      name: "allnodes"
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/allnodes-test'
+    db: "mongodb://localhost/allnodes-test",
+    esDb: "localhost:9200"
   },
 
   production: {
     root: rootPath,
     app: {
-      name: 'allnodes'
+      name: "allnodes"
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/allnodes-production'
+    db: "mongodb://localhost/allnodes-production",
+    esDb: "localhost:9200"
   }
 };
 
